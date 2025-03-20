@@ -28,9 +28,9 @@ O programa inicia solicitando o nome do cliente e o saldo inicial, apresentando 
 ## Como Executar o Projeto
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/SeuUsuario/ProjetoContaCorrente.git
-   ```
+  ```bash
+  git clone https://github.com/SeuUsuario/ProjetoContaCorrente.git
+  ```
 
 2. Compile o projeto:
   ```bash
