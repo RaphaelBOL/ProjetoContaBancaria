@@ -1,6 +1,10 @@
 # Projeto Conta Corrente - Java
 
-![Tela do Projeto](./src/img/ProjetoContaCorrente.png)
+<p align="center">
+  <img src="./src/Img/ProjetoContaCorrenteImg1.png" alt="Imagem 1" width="200" style="margin-right: 10px;">
+  <img src="./src/Img/ProjetoContaCorrenteImg2.png" alt="Imagem 2" width="200" style="margin-right: 10px;">
+  <img src="./src/Img/ProjetoContaCorrenteImg3.png" alt="Imagem 3" width="200">
+</p>
 
 Este projeto é um simulador de conta corrente desenvolvido em Java, que permite ao usuário realizar operações bancárias como consulta de saldo, recebimento de créditos e transferência de valores. O sistema demonstra o uso de controle de fluxo, operações aritméticas e formatação monetária utilizando a classe `NumberFormat` para exibir valores no padrão brasileiro.
 
