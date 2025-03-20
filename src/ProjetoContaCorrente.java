@@ -1,5 +1,3 @@
-package ProjetoFinal;
-
 import java.util.Locale;
 import java.util.Scanner;
 import java.text.NumberFormat;
@@ -8,17 +6,16 @@ public class ProjetoContaCorrente {
     public static void main(String[] args) {
 
         Scanner leitor = new Scanner(System.in);
-        NumberFormat formatacaoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-
-        double saldoInicial = 0;
-        double saldo = saldoInicial;
-        double movimento = 0;
-        boolean loop = true;
+        Locale localeBR = new Locale.Builder().setLanguage("pt").setRegion("BR").build();
+        NumberFormat formatacaoMoeda = NumberFormat.getCurrencyInstance(localeBR);
 
         System.out.println("Digite o nome do cliente:");
         String nomeCliente = leitor.nextLine();
         System.out.println("Digite o saldo inicial se houver, caso contrato digite 0");
-        saldoInicial = leitor.nextDouble();
+        double saldoInicial = leitor.nextDouble();
+        double saldo = saldoInicial;
+        double movimento;
+        boolean loop = true;
 
         System.out.printf("""
                 ******************************************
@@ -62,11 +59,12 @@ public class ProjetoContaCorrente {
                     System.out.println("Você realizou uma transferência no valor de " + formatacaoMoeda.format(movimento) + "." + "\nSaldo atualizado: " + formatacaoMoeda.format(saldo));
                 }
             } else if (opcao == 4) {
+                loop = false;
                 System.out.println("Acesso Encerrado!");
-                break;
+
             } else {
                 System.out.println("""
-                        opção inválida!
+                        Opção Inválida!
                         Selecione uma nova opção.""");
             }
         }
